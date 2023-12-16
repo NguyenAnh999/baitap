@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://th.bing.com/th/id/R.ffedd4b8a2a202ae0156aad77e280d07?rik=jjY9ZaIKmVY3VA&riu=http%3a%2f%2fxemanhdep.com%2fwp-content%2fuploads%2f2016%2f04%2fanh-dep-hinh-nen-06.jpg&ehk=FFPqieHWp3MbEi1oGIL5LMcarB%2b%2b5PtbbV37%2b7fLUTI%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .box {
+            width: 380px;
+            height: 420px;
+            background-color: #dc1c1c;
+            position: relative;
+            border-radius: 8px;
+            display: flex;
+        }
+
+        form {
+            position: absolute;
+            inset: 10px;
+            background-color: #6e0707;
+            border-radius: 8px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            padding: 50px 40px;
+        }
+        .input input{
+            padding: 10px;
+            margin-left: 39px;
+            margin-bottom: 19px;
+            border-radius: 5px;
+            border-color: #dc1c1c;
+        }
+        button{padding: 10px;
+               border-radius: 30px;  
+               border-width: 20px;
+               border-color: rebeccapurple;        
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <form action="">
+            <div class="input">
+                <input placeholder="nhập điểm toán" type="text" name="" id="diemtoan" >
+            </div>
+
+            <div class="input">
+                <input placeholder="nhập điểm lý" type="text" name="" id="diemly">
+            </div>
+
+            <div class="input">
+                <input placeholder="nhập điểm hóa" type="text" name="" id="diemhoa">
+            </div>
+
+            <div>
+                <button onclick="ketqua()">xem điểm trung bình và điểm tổng 3 môn</button>
+            </div>
+        </form>
+    </div>
+
+    <body>
+        <script>
+            function ketqua() {
+                var diemtoan = parseInt(document.getElementById("diemtoan").value);
+                var diemly = parseInt(document.getElementById("diemly").value);
+                var diemhoa = parseInt(document.getElementById("diemhoa").value);
+                var dtb = (diemtoan + diemly + diemhoa) / 3
+                var dt = diemtoan + diemly + diemhoa
+                // alert(dtb)
+                // alert(dt)
+                document.write("diem tong cua ban la:", dt, ".", "diem trung binh cua ban la:", dtb)
+            }
+        </script>
+    </body>
+
+</body>
+
+</html>
