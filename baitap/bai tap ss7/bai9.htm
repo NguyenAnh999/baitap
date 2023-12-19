@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var toan = +prompt("diem toan")
+        var ly = +prompt("diem ly")
+        var hoa = +prompt("diem hoa")
+        var van = +prompt("diem van")
+        var su = +prompt("diem su")
+        var dia = +prompt("diem dia")
+        var DTB = (toan + ly + hoa + van + su + dia) / 6
+        switch (true) {
+            case DTB >=8 && DTB <=10:
+                alert("xep loai GIOI")
+                break;
+            case DTB >=6.5 && DTB <=7.9:
+                alert("xep loai KHA")
+                break;
+            case DTB >=5 && DTB <=6.4:
+                alert("xep loai TRUNG BINH")
+                break;
+            case DTB <5:
+                alert("xep loai YEU")
+                break;
+
+            default:
+                alert("BẠN VUI LÒNG ĐIỀN ĐÚNG THÔNG TIN BẰNG 'SỐ' TRÊN THANG ĐIỂM 1O")
+                break;
+        }
+    </script>
+</body>
+
+</html>

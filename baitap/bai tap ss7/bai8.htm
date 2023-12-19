@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var weight = +prompt("hãy nhập cân nặng của bạn (kg)")
+        var height = +prompt("hãy nhập chiều cao của bạn (m)")
+        var bmi = weight/(height^2)
+        console.log(bmi)
+        switch (true) {
+            case bmi < 18.5:
+                alert("gầy")
+                break;
+            case bmi > 18.5 && bmi < 24.9 :
+                alert("bình thường")
+                break;
+            case bmi > 24.9 && bmi <= 25 :
+                alert("thừa cân")
+                break;
+            case bmi >25 && bmi < 29.9:
+                alert("tiền béo phì")
+                break;
+            case bmi > 30 && bmi < 34.9:
+                alert("béo phì độ 1")
+                break;
+            case bmi > 35 && bmi < 39.9:
+                alert("béo phì độ 2")
+                break;
+            case  40 <= bmi :
+                alert("béo phì độ 3")
+                break;
+
+            default:
+                break;
+        }       
+    </script>
+</body>
+
+</html>

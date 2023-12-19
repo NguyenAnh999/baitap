@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var month = +prompt("nhap thang ban muon xem")
+        switch (month) {
+            case 1:
+            case 5:
+            case 6:
+            case 7:    
+            case 9:
+                alert("thang 1 co 30 ngay")
+                break;
+            case 2:
+                alert("thang 2 co 28 ngay")
+                break;
+            case 3:
+            case 4:
+            case 10:
+            case 12:
+                alert("thang 3 co 31 ngay")
+                break;
+            case 8:
+                alert("thang 8 co 29 ngay")
+                break;
+            case 11:
+                alert("thang 11 co 29 ngay")
+                break;
+            default:
+                break;
+        }  
+    </script>
+</body>
+
+</html>
