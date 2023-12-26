@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let chuoi = "hello world";
+       let arr = chuoi.split("");
+       let lxh = {};
+       for (let i = 0; i < arr.length ; i++) {
+        let kt = arr[i];
+        if(lxh[kt]) {
+            lxh[kt]++;
+        }else{lxh[kt] = 1;}
+       }
+       console.log(lxh);
+    </script>
+</body>
+</html>

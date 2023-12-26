@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function capsocotongbang10(ham) {
+            document.write("<table border =1 cellspacing = 0>")
+            for (let i = 0; ham[i] < ham.length; i++) {
+                for (let j = 0; ham[j] < ham.length; j++) {
+                     document.write("<tr>")
+                    if (i+j==10) {
+                        console.log(i,j); document.write(`<td>${i},${j}</td>`);
+                    }
+                    document.write("</tr>")}
+                
+            }
+            document.write("</table>")
+        }capsocotongbang10([1,2,3,4,5,6,7,8,9,10])
+    </script>
+</body>
+</html>
