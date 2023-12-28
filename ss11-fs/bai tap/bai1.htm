@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function inhoa(name) {
+  // Tách chuỗi tên thành một danh sách các từ.
+  let ten = name.split(" ");
+
+  // Lặp qua danh sách các từ và chuyển đổi kí tự đầu tiên của mỗi từ thành chữ hoa.
+  for (let i = 0; i < ten.length; i++) {
+ten[i] = ten[i].charAt(0).toUpperCase() + ten[i].slice(1);
+  }
+
+  // Trả về chuỗi tên đầy đủ với kí tự đầu tiên viết hoa.
+  return ten.join(" ");
+}
+
+// Nhập tên đầy đủ của người dùng.
+let name = prompt("Nhập tên đầy đủ: ");
+
+// In ra tên đầy đủ với kí tự đầu tiên viết hoa.
+let saukhiin = inhoa(name);
+console.log(saukhiin);
+    </script>
+</body>
+</html>

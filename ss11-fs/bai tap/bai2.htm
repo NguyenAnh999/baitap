@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let name=prompt('nhập tên');
+        for (let i = 0; i < name.length; i++) {          
+                let kt=name[i];
+                chuoihoanthanh=[];
+                if (kt===kt.toLowerCase()) {
+                    chuoihoanthanh+=kt.toUpperCase();            
+            }else{
+                chuoihoanthanh+=kt.toLowerCase();                  
+            } 
+            let ten = chuoihoanthanh.join(" ");
+            console.log(ten);
+         }    
+      
+
+    </script>
+</body>
+</html>
