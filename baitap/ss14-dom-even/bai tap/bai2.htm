@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+textarea{
+    color: bisque;
+    background-color: black;
+    width: 100%;
+}  
+button:hover{color: aqua;}
+button{  
+    background-color: black;
+    text-align: center;
+    font-size: xx-small;
+    color: beige;
+    border-radius: 6px;
+}
+    .key {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="tong">
+        <textarea name="" id="text" cols="30" rows="4"></textarea>
+        <div class="key">
+            <div class="hang1">
+                <button>q</button>
+                <button>w</button>
+                <button>e</button>
+                <button>r</button>
+                <button>t</button>
+                <button>y</button>
+                <button>u</button>
+                <button>i</button>
+                <button>o</button>
+                <button>p</button>
+            </div>
+
+            <div class="hang2">
+                <button>a</button>
+                <button>s</button>
+                <button>d</button>
+                <button>f</button>
+                <button>g</button>
+                <button>h</button>
+                <button>j</button>
+                <button>k</button>
+                <button>l</button>
+            </div>
+            <div class="hang3">
+                <button>z</button>
+                <button>x</button>
+                <button>c</button>
+                <button>v</button>
+                <button>b</button>
+                <button>n</button>
+                <button>m</button>
+            </div>
+            <div>
+                <button>space</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let buttonElemetns = document.getElementsByTagName("button");
+
+        for (let i = 0; i < buttonElemetns.length; i++) {
+            if (i < buttonElemetns.length - 1) {
+                buttonElemetns[i].addEventListener('click', clickButton);
+            } else {
+                buttonElemetns[i].addEventListener('click', clickButtonSpeca);
+            }
+        }
+        function clickButton() {
+            let textAreaElement = document.getElementById('text');
+            let textAreaValue = textAreaElement.value;
+            textAreaValue += this.innerText;
+            document.getElementById('text').value = textAreaValue
+        }
+        function clickButtonSpeca() {
+            let textAreaElement = document.getElementById('text');
+            let textAreaValue = textAreaElement.value;
+            textAreaValue += ' ';
+            document.getElementById('text').value = textAreaValue
+        }
+    </script>
+</body>
+
+</html>

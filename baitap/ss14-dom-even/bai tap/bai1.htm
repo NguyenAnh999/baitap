@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="bt1"> tôn ngộ không </h1>
+    <button onclick="show()">hiện thân</button>
+    <button  onclick="hide()">ẩn thân</button>
+    <script>
+function show(params) {
+    let text = document.getElementById('bt1');
+    text.innerHTML = " tôn ngộ không ";
+}
+function hide(params) {
+    let text = document.getElementById('bt1');
+    text.innerHTML = "";
+}
+    </script>
+</body>
+</html>
