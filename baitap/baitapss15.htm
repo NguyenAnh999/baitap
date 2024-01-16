@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #save {
+            width: 50%;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        th {
+            padding: 5px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .divtable {
+            border: 1px solid;
+        }
+
+        .studentlist {
+            border: 1px solid;
+        }
+
+        .tablelist,
+        .tablelist th,
+        .tablelist td {
+            border: 1px solid;
+        }
+
+        .bt {
+            color: rgb(178, 34, 178);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="divtable">
+            <table>
+                <caption>
+                    <h2>Thông tin học viên</h2>
+                </caption>
+                <tbody>
+                    <tr>
+                        <td><label for="name">Họ và Tên</label></td>
+                        <td><input type="text" id="name" placeholder="vui lòng nhập tên"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="email">Email</label></td>
+                        <td><input  type="email" id="email" placeholder="vui lòng nhập email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Số điệnt thoại</label></td>
+                        <td> <input type="number" id="phone" placeholder="vui lòng nhập số điện thoại"></td>
+                    </tr>
+                    <tr>
+                        <td> <label for="address">quê quán</label></td>
+                        <td><input type="text" id="address" placeholder="vui lòng nhập địa chỉ quê quán"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Gender">Giới tính</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="Gender" value="nam"> nam
+                            <input type="radio" name="Gender" value="nữ">nữ
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <button onclick="save()" id="save">lưu lại</button>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="studentlist">
+            <h2>Danh sách học viên</h2>
+            <div>
+                <label for="search">tìm kiếm học viên:</label>
+                <input type="text">
+                <button id="search">search</button>
+            </div>
+            <div class="list">
+                
+                    <table class="tablelist">
+                        <tr>
+                            <th>#</th>
+                            <th>Họ tên</th>
+                            <th>Email</th>
+                            <th>Điện thoại</th>
+                            <th>Địa chỉ</th>
+                            <th>Gender</th>
+                            <th>Hành động</th>
+                            <th><button id="sapxep">Sắp xếp</button></th>
+                        </tr>
+                    </table>
+               
+            </div>
+        </div>
+    </div>
+    <script>
+          
+        function save() {
+            let name = document.getElementById('name').value
+            let email = document.getElementById('email').value
+            let phone = document.getElementById('phone').value
+            let address = document.getElementById('address').value
+            let gender = document.getElementsByName('Gender')
+            let getgernder = ''
+            let tr = document.getElementsByClassName('trlist')
+            let stt = 1
+            for (let i = 0; i < tr.length; i++) {
+                stt = i+2
+            }
+            for (let i = 0; i < gender.length; i++) {
+                if (gender[i].checked == true) {
+                    getgernder = gender[i].value;
+                }
+            }
+            document.getElementsByClassName('tablelist')[0].innerHTML += `<tr class="trlist"><td class="nstt" >${stt}</td><td>${name}</td><td>${email}</td><td>${phone}</td><td>${address}</td><td>${getgernder}</td><td><u onclick="edit(${stt})" class="bt edit">edit</u> | <u onclick="deleteall(${stt})" class="bt delete">delete</u></td></tr>`
+            name = document.getElementById('name').value = ''
+            email = document.getElementById('email').value = ''
+            phone = document.getElementById('phone').value = ''
+            address = document.getElementById('address').value = ''
+        }
+        function edit(stt) {
+        
+        }
+        function deleteall(stt) {
+            let needdelete = document.getElementsByClassName('trlist')
+         needdelete[stt-1].remove()
+         let newlist = document.getElementsByClassName('nstt')
+         let 
+         for (let i = 0; i < needdelete.length; i++) {
+            newlist[i].innerHTML=i+1          
+         }
+        }
+    </script>
+</body>
+
+</html>
